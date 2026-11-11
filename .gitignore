@@ -1,0 +1,28 @@
+# Build artifacts & temp files
+*.obj
+*.pdb
+*.ilk
+*.idb
+*.exp
+*.lib.temp
+*.ncb
+*.opt
+*.plg
+*.aps
+*.suo
+*.user
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vs/
+.vscode/
+
+# Backups
+*.bak
+*.orig_backup

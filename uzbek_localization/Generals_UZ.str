@@ -1,0 +1,454 @@
+// ============================================================================
+// Command & Conquer: Generals & Zero Hour - O'zbek Tili String Jadvali (Generals_UZ.str)
+// Loyiha: Generals Uzbek Tilida
+// Muallif: Tuxtamurod-Jurayev
+// ============================================================================
+
+GUI:Command&ConquerGenerals
+"Command & Conquer: Generallar"
+End
+
+GUI:Command&ConquerGeneralsZeroHour
+"Command & Conquer: Generallar - Hal qiluvchi Soat (Zero Hour)"
+End
+
+// --- ASOSIY MENYU (MAIN MENU) ---
+GUI:SinglePlayer
+"Yakka O'yinchi"
+End
+
+GUI:MultiPlayer
+"Ko'p O'yinchili O'yin"
+End
+
+GUI:Options
+"Sozlamalar"
+End
+
+GUI:Replays
+"Takroriy Tomosha (Replay)"
+End
+
+GUI:Credits
+"Mualliflar va Ijodkorlar"
+End
+
+GUI:Exit
+"O'yindan Chiqish"
+End
+
+GUI:PlayGame
+"O'yinni Boshlash"
+End
+
+GUI:Campaign
+"Kampaniya Missiyalari"
+End
+
+GUI:Skirmish
+"Tezkor Jang (Skirmish)"
+End
+
+GUI:CustomGame
+"Maxsus O'yin"
+End
+
+GUI:QuickMatch
+"Tezkor Raqib Topish"
+End
+
+GUI:Back
+"Orqaga"
+End
+
+GUI:Cancel
+"Bekor Qilish"
+End
+
+GUI:OK
+"OK"
+End
+
+GUI:Accept
+"Qabul Qilish"
+End
+
+GUI:Yes
+"Ha"
+End
+
+GUI:No
+"Yo'q"
+End
+
+GUI:Apply
+"Qo'llash"
+End
+
+GUI:Save
+"Saqlash"
+End
+
+GUI:Load
+"Yuklash"
+End
+
+GUI:Delete
+"O'chirish"
+End
+
+GUI:Restart
+"Qayta Boshlash"
+End
+
+GUI:Resume
+"Davom Ettirish"
+End
+
+GUI:Surrender
+"Taslim Bo'lish"
+End
+
+GUI:Quit
+"Chiqish"
+End
+
+// --- SOZLAMALAR (OPTIONS) ---
+GUI:Audio
+"Ovoz Sozlamalari"
+End
+
+GUI:Video
+"Grafika Sozlamalari"
+End
+
+GUI:Keyboard
+"Boshqaruv Tugmalari"
+End
+
+GUI:Resolution
+"Ekran Ruxsati"
+End
+
+GUI:Gamma
+"Yorug'lik (Gamma)"
+End
+
+GUI:MusicVolume
+"Musiqa Balandligi"
+End
+
+GUI:VoiceVolume
+"Ovozlar Balandligi"
+End
+
+GUI:FXVolume
+"Effektlar Balandligi"
+End
+
+// --- FRAKSIYALAR (FACTIONS) ---
+SIDE:America
+"AQSH (Amerika Qo'shma Shtatlari)"
+End
+
+SIDE:China
+"Xitoy Xalq Respublikasi"
+End
+
+SIDE:GLA
+"GLA (Global Ozodlik Armiyasi)"
+End
+
+SIDE:Boss
+"Bosh General"
+End
+
+// --- GENERALLAR (ZERO HOUR GENERALS) ---
+GUI:GeneralAirForce
+"General Granger - Harbiy Havo Kuchlari Generali"
+End
+
+GUI:GeneralSuperWeapon
+"General Alexander - O'ta Qurollar Generali"
+End
+
+GUI:GeneralLaser
+"General Townes - Lazer Qurollari Generali"
+End
+
+GUI:GeneralInfantry
+"General Shin Fai - Piyoda Qo'shinlar Generali"
+End
+
+GUI:GeneralTank
+"General Ta Hun Kwai - Zirhli Tank Kuchlari Generali"
+End
+
+GUI:GeneralNuke
+"General Tsing Shi Tao - Yadroviy Qurollar Generali"
+End
+
+GUI:GeneralToxin
+"General Dr. Thrax - Kimyoviy va Toksin Qurollar Generali"
+End
+
+GUI:GeneralStealth
+"General Prince Kassad - Yashirin Harakatlar Generali"
+End
+
+GUI:GeneralDemolition
+"General Rodall Juhziz - Portlovchi Moddalar Generali"
+End
+
+// --- BOSHQARUV TUGMALARI VA HUD (CONTROL BAR) ---
+CONTROLBAR:Attack
+"Hujum Qilish"
+End
+
+CONTROLBAR:Move
+"Harakatlanish"
+End
+
+CONTROLBAR:Stop
+"To'xtash"
+End
+
+CONTROLBAR:Guard
+"Hududni Qo'riqlash"
+End
+
+CONTROLBAR:Patrol
+"Patrul Qilish"
+End
+
+CONTROLBAR:ForceFire
+"Majburiy O't Ochish"
+End
+
+CONTROLBAR:ForceMove
+"Majburiy Harakatlanish"
+End
+
+CONTROLBAR:Sell
+"Bino/Obyektni Sotish"
+End
+
+CONTROLBAR:Repair
+"Bino va Texnikani Ta'mirlash"
+End
+
+CONTROLBAR:ConstructBuilding
+"Yangi Bino Qurish"
+End
+
+CONTROLBAR:TrainUnit
+"Yangi Bo'linma Tayyorlash"
+End
+
+// --- XABARLAR VA OGOHLANTIRISHLAR (ALERTS & MESSAGES) ---
+GUI:InsufficientFunds
+"Mablag' yetarli emas!"
+End
+
+GUI:LowPower
+"Ogohlantirish: Elektr quvvati kam!"
+End
+
+GUI:BaseUnderAttack
+"Bazamizga dushman hujum qilmoqda!"
+End
+
+GUI:UnitUnderAttack
+"Bo'linmalarimiz o't ostida qoldi!"
+End
+
+GUI:UnitReady
+"Bo'linma jangovar tayyor!"
+End
+
+GUI:BuildingConstructed
+"Bino qurib bitkazildi."
+End
+
+GUI:UnitPromoted
+"Bo'linma yangi jangovar darajaga ko'tarildi!"
+End
+
+GUI:Victory
+"G'alaba! Dushman batamom tor-mor etildi!"
+End
+
+GUI:Defeat
+"Mag'lubiyat! Kuchlarimiz yo'q qilindi..."
+End
+
+GUI:SuperweaponReady
+"O'ta Qurol foydalanishga tayyor!"
+End
+
+GUI:ParticleCannonActivated
+"Zarrachalar To'pi ishga tushirildi!"
+End
+
+GUI:NuclearMissileLaunched
+"Yadroviy Raketa uchirildi!"
+End
+
+GUI:SCUDStormLaunched
+"SKAD Bo'roni hujumi boshlandi!"
+End
+
+// --- OBYEKTLAR VA TEXNIKALAR (UNITS & STRUCTURES) ---
+OBJECT:AmericaVehicleDozer
+"AQSH Muhandislik Dozeri"
+End
+
+OBJECT:AmericaInfantryRanger
+"Reyndjer (AQSH Piyodasi)"
+End
+
+OBJECT:AmericaInfantryMissileDefender
+"Raketa Otuvchi Askar"
+End
+
+OBJECT:AmericaVehicleHumvee
+"Xamvi (Tezkor Zirhli Avtomobil)"
+End
+
+OBJECT:AmericaVehicleCrusader
+"Krusader Jangovar Tanki"
+End
+
+OBJECT:AmericaVehiclePaladin
+"Paladin Lazerli Tanki"
+End
+
+OBJECT:AmericaVehicleAmbulance
+"Tibbiy Qutqaruv Mashinasi"
+End
+
+OBJECT:AmericaVehicleTomahawk
+"Tomagavk Raketa Otish Qurilmasi"
+End
+
+OBJECT:AmericaVehicleComanche
+"Komanchi Jangovar Vertolyoti"
+End
+
+OBJECT:AmericaJetRaptor
+"Raptor Tovushdan Tez Qiruvchisi"
+End
+
+OBJECT:AmericaJetAurora
+"Avrora Tovushdan Tez Bombardimonchisi"
+End
+
+OBJECT:AmericaStructureCommandCenter
+"AQSH Bosh Qo'mondonlik Markazi"
+End
+
+OBJECT:AmericaStructurePowerPlant
+"Elektr Stansiyasi"
+End
+
+OBJECT:AmericaStructureBarracks
+"AQSH Kazarmasi (Piyodalar bazasi)"
+End
+
+OBJECT:AmericaStructureSupplyCenter
+"Ta'minot va Resurs Markazi"
+End
+
+OBJECT:AmericaStructureWarFactory
+"Harbiy Texnika Zavodi"
+End
+
+OBJECT:AmericaStructureAirfield
+"Harbiy Havo Bazasi (Aerodrom)"
+End
+
+OBJECT:AmericaStructurePatriot
+"Patriot Havodan Mudofaa Batareyasi"
+End
+
+OBJECT:AmericaStructureParticleCannon
+"Zarrachalar To'pi (Particle Cannon)"
+End
+
+// --- XITOY (CHINA) ---
+OBJECT:ChinaVehicleDozer
+"Xitoy Qurilish Dozeri"
+End
+
+OBJECT:ChinaInfantryRedGuard
+"Qizil Gvardiyachi (Piyoda)"
+End
+
+OBJECT:ChinaInfantryTankHunter
+"Tank Ovchisi (Granatomyotchi)"
+End
+
+OBJECT:ChinaInfantryHacker
+"Harbiy Xaker"
+End
+
+OBJECT:ChinaVehicleBattleMaster
+"Battlemaster Asosiy Jangovar Tanki"
+End
+
+OBJECT:ChinaVehicleOverlord
+"Overlord O'ta Og'ir Tanki"
+End
+
+OBJECT:ChinaVehicleGattlingTank
+"Gatling Pulemyotli Tank"
+End
+
+OBJECT:ChinaJetMIG
+"MiG Qiruvchi Samolyoti"
+End
+
+OBJECT:ChinaStructureCommandCenter
+"Xitoy Bosh Qo'mondonlik Markazi"
+End
+
+OBJECT:ChinaStructureNuclearMissile
+"Yadroviy Raketa Silosi"
+End
+
+// --- GLA ---
+OBJECT:GLAWorker
+"GLA Quruvchi Ishchisi"
+End
+
+OBJECT:GLAInfantryRebel
+"GLA Isyonchisi"
+End
+
+OBJECT:GLAInfantryTunnelDefender
+"RPG Otuvchi Himoyachi"
+End
+
+OBJECT:GLAVehicleTechnical
+"Pikap (Texnik O'q Otish Mashinasi)"
+End
+
+OBJECT:GLAVehicleScorpion
+"Skorpion Yengil Tanki"
+End
+
+OBJECT:GLAVehicleMarauder
+"Marader Jangovar Tanki"
+End
+
+OBJECT:GLAVehicleBombTruck
+"Portlovchi Moddalar Yuklangan Mashina"
+End
+
+OBJECT:GLAStructureCommandCenter
+"GLA Bosh Boshqaruv Markazi"
+End
+
+OBJECT:GLAStructureSCUDStorm
+"SKAD Bo'roni Raketa Majmuasi"
+End
