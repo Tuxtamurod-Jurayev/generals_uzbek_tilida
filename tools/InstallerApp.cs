@@ -417,31 +417,59 @@ namespace GeneralsUzbekInstaller
         private void BtnLaunch_Click(object sender, EventArgs e)
         {
             string gameDir = txtGamePath.Text.Trim();
-            string genExe = Path.Combine(gameDir, "generals.exe");
-            if (!File.Exists(genExe))
+            if (string.IsNullOrEmpty(gameDir) || !Directory.Exists(gameDir))
             {
-                genExe = Path.Combine(gameDir, "generals.exe");
+                MessageBox.Show("Iltimos, o'yin o'rnatilgan papkani ko'rsating!", "Papka topilmadi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
 
-            if (File.Exists(genExe))
+            string[] possibleExes = new string[]
+            {
+                "generals.exe",
+                "generalsMD.exe",
+                "GeneralsZH.exe",
+                "game.dat",
+                "Command & Conquer Generals.exe",
+                "Command & Conquer Generals Zero Hour.exe"
+            };
+
+            string foundExe = null;
+            foreach (string exeName in possibleExes)
+            {
+                string fullPath = Path.Combine(gameDir, exeName);
+                if (File.Exists(fullPath))
+                {
+                    foundExe = fullPath;
+                    break;
+                }
+            }
+
+            if (foundExe != null)
             {
                 try
                 {
-                    ProcessStartInfo psi = new ProcessStartInfo(genExe)
+                    ProcessStartInfo psi = new ProcessStartInfo(foundExe)
                     {
                         WorkingDirectory = gameDir
                     };
                     Process.Start(psi);
-                    Log("[+] O'yin ishga tushirildi: " + genExe);
+                    Log("[+] O'yin muvaffaqiyatli ishga tushirildi: " + foundExe);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("O'yinni ochishda xatolik: " + ex.Message);
+                    MessageBox.Show("O'yinni ishga tushirishda xatolik yuz berdi:\n" + ex.Message, "Xatolik", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("generals.exe fayli topilmadi. O'yinni Steam yoki EA App orqali ishga tushirishingiz mumkin.", "Eslatma", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string msg = string.Format(
+                    "Tanlangan papkada o'yinning asosiy fayli (generals.exe yoki game.dat) topilmadi.\n\n" +
+                    "Ko'rsatilgan papka: {0}\n\n" +
+                    "Tushuntirish: O'zbek tili patchi muvaffaqiyatli nusxalandi, ammo o'yinni ishga tushirish uchun " +
+                    "haqiqiy Generals yoki Zero Hour o'rnatilgan papkani tanlashingiz yoki o'yinni Steam / EA App orqali ochishingiz kerak.",
+                    gameDir
+                );
+                MessageBox.Show(msg, "generals.exe Topilmadi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
