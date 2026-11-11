@@ -1,26 +1,52 @@
-# Command & Conquer: Generals & Zero Hour — O'zbek Tilida
+# Command & Conquer: Generals & Zero Hour — O'zbek Tilida (To'liq Lotin Alifbosida)
 
-Ushbu repozitoriy afsonaviy **Command & Conquer: Generals** hamda uning rasmiy kengaytmasi **Generals: Zero Hour** uchun to'liq o'zbek tilidagi lokalizatsiya, avtomatlashtirilgan vositalar va o'yinning rasmiy SAGE dvigateli C++ manba kodini o'z ichiga oladi.
+Ushbu repozitoriy afsonaviy **Command & Conquer: Generals** hamda uning rasmiy kengaytmasi **Generals: Zero Hour** uchun to'liq o'zbek tilidagi (lotin alifbosida) matnlar, jangovar ovozli xabarlar (EVA speech), audio sozlamalari, avtomatlashtirilgan vositalar va o'yinning rasmiy SAGE dvigateli C++ manba kodini o'z ichiga oladi.
 
 Loyiha muallifi: [Tuxtamurod-Jurayev](https://github.com/Tuxtamurod-Jurayev)
 
 ---
 
-## 🚀 1. O'zbek Tili Patchini Avtomatik O'rnatish (1-klikda)
+## ⚡ 1. O'rnatish: Tayyor `.exe` Dasturi Orqali (1-bosqichda)
 
-Agar kompyuteringizda o'yin o'rnatilgan bo'lsa (Steam, EA App yoki boshqa versiya), o'zbek tilini avtomatik o'rnatish uchun:
+Hech qanday qo'shimcha dastur (Python va h.k.) talab etilmaydi! Repozitoriy ildizidagi tayyor o'rnatuvchi dastur mavjud:
 
-1. Repozitoriyni yuklab oling.
-2. Papkadagi **`install_uzbek_patch.bat`** faylini sichqoncha bilan ikki marta bosing (yoki terminalda quyidagini bajaring):
-   ```bash
-   python tools/installer.py
-   ```
-3. O'rnatuvchi avtomatik ravishda o'yin papkasini aniqlaydi, asl fayllarni xavfsiz zaxiraga oladi (*backup*) va barcha o'zbek tili matnlarini o'yinga joylashtiradi.
-4. O'yinni odatiy tarzda ishga tushiring — barcha menyular, boshqaruv tugmalari va bildirishnomalar o'zbek tilida chiqadi!
+### 🎮 **`Generals_Uzbek_Installer.exe`**
+1. Repozitoriy ildizidagi **`Generals_Uzbek_Installer.exe`** faylini sichqoncha bilan ikki marta bosing.
+2. Dastur kompyuteringizdagi o'yin papkasini (Steam, EA App yoki Registr orqali) avtomatik aniqlaydi. Agar o'yin boshqa joyda bo'lsa, *"Ko'rib chiqish..."* tugmasi orqali papkani tanlang.
+3. Kerakli komponentlarni belgilang:
+   * ✅ **O'zbek tili matnlari (Lotin yozuvida):** Barcha asosiy menyular, sozlamalar, fraksiyalar, jangovar texnikalar, generallar va xabarlar.
+   * ✅ **O'zbekcha Ovozlar (EVA Speech):** Baza hujum ostida ekanligi, bo'linma tayyorligi, bino qurilishi va o'ta qurollar haqidagi o'zbekcha ovozli xabarlar (`.wav`).
+   * ✅ **O'zbekcha Musiqa sozlamalari:** Maxsus musiqa treklarini o'yinga integratsiya qilish.
+   * ✅ **Asl fayllarni zaxiraga olish (Backup):** Istalgan vaqtda asl holatga qaytish imkoniyati.
+4. **"O'ZBEK TILINI O'RNATISH"** tugmasini bosing.
+5. O'rnatish yakunlangach, to'g'ridan-to'g'ri **"O'YINNI ISHGA TUSHIRISH"** tugmasi orqali o'yinga kiring!
+
+*(Foydalanuvchilar uchun `install_uzbek_patch.bat` ham qo'shimcha sifatida mavjud).*
 
 ---
 
-## 🛠️ 2. Tarjima Vositalari (`tools/csf_tool.py`)
+## 🎙️ 2. O'zbekcha Ovozlar va Musiqalar (Audio Tizimi)
+
+O'yin dvigatelida audio tizimi `Data\Audio\` va `Data\INI\` orqali boshqariladi:
+
+* **`uzbek_audio/Speech/`**: O'zbekcha EVA jangovar diktor ovozlari:
+  * `Eva_BaseUnderAttack.wav` — *"Bazamizga dushman hujum qilmoqda!"*
+  * `Eva_UnitReady.wav` — *"Bo'linma jangovar tayyor!"*
+  * `Eva_BuildingComplete.wav` — *"Bino qurib bitkazildi!"*
+  * `Eva_InsufficientFunds.wav` — *"Mablag' yetarli emas!"*
+  * `Eva_LowPower.wav` — *"Ogohlantirish! Elektr quvvati kam!"*
+  * `Eva_NuclearLaunched.wav` — *"Xavf! Yadroviy raketa uchirildi!"*
+  * `Eva_ParticleCannonReady.wav` — *"Zarrachalar to'pi tayyor!"*
+  * `Eva_SCUDStormReady.wav` — *"SKAD bo'roni tayyor!"*
+  * `Eva_Victory.wav` — *"G'alaba! Dushman batamom tor-mor etildi!"*
+  * `Eva_Defeat.wav` — *"Mag'lubiyat! Kuchlarimiz yo'q qilindi!"*
+* **`uzbek_audio/Speech_UZ.ini`**: O'yin ovoz hodisalarini (AudioEvents) o'zbekcha tovushlar bilan bog'lovchi konfiguratsiya.
+* **`uzbek_audio/Music_UZ.ini`**: O'zbekcha jangovar musiqalar va mavzularni ulash uchun konfiguratsiya.
+* **`tools/generate_uzbek_audio.ps1`**: Yangi ovozli xabarlarni avtomatik generatsiya qilish vositasi.
+
+---
+
+## 🛠️ 3. Tarjima Vositalari (`tools/csf_tool.py`)
 
 C&C Generals o'yinida barcha matnlar binar **`.csf`** (String Table) va oddiy matn **`.str`** formatlarida saqlanadi. 
 
@@ -36,43 +62,40 @@ python tools/csf_tool.py export_str uzbek_localization/Generals.csf matnlar.str
 python tools/csf_tool.py compile_str uzbek_localization/Generals_UZ.str uzbek_localization/Generals.csf
 ```
 
-### JSON formatida eksport/import qilish:
-```bash
-python tools/csf_tool.py export_json uzbek_localization/Generals.csf matnlar.json
-python tools/csf_tool.py compile_json matnlar.json uzbek_localization/Generals.csf
-```
-
 ---
 
-## 📁 3. Repozitoriy Tuzilishi
+## 📁 4. Repozitoriy Tuzilishi
 
+* **`Generals_Uzbek_Installer.exe`** — 1-klikda o'rnatuvchi tayyor Windows dasturi (.NET / C#).
 * **`uzbek_localization/`**:
-  * `Generals_UZ.str` — O'zbek tilidagi barcha o'yin matnlari (bosh menyu, sozlamalar, jangovar bo'linmalar, qurollar, bildirishnomalar).
-  * `Generals.csf` — Kompilyatsiya qilingan binar string jadvali (o'yin bevosita shu fayldan o'qiydi).
+  * `Generals_UZ.str` — To'liq o'zbek lotin alifbosidagi matnlar bazasi.
+  * `Generals.csf` — O'yin dvigateli to'g'ridan-to'g'ri o'qiydigan binar CSF fayli.
+* **`uzbek_audio/`**:
+  * `Speech/` — O'zbekcha EVA ovozli fayllari (`.wav`).
+  * `Speech_UZ.ini` — Ovozlar sozlamasi.
+  * `Music_UZ.ini` — Musiqalar sozlamasi.
 * **`tools/`**:
-  * `csf_tool.py` — Westwood CSF formatini dekodlash va kodlash vositasi.
-  * `installer.py` — O'yinni avtomatik topib, patchni o'rnatuvchi skript.
-* **`Generals/`** — Asosiy C&C Generals o'yinining to'liq C++ manba kodi.
-* **`GeneralsMD/`** — Generals Zero Hour (*Mission Disk*) kengaytmasining C++ manba kodi.
-* **`install_uzbek_patch.bat`** — Windows foydalanuvchilari uchun 1-bosqichli tezkor o'rnatuvchi.
+  * `InstallerApp.cs` — Installer dasturi C# manba kodi.
+  * `csf_tool.py` — Westwood CSF formatini tahrirlash dasturi.
+  * `installer.py` — Python asosidagi muqobil o'rnatuvchi.
+  * `generate_uzbek_audio.ps1` — Ovozlar generatori.
+* **`Generals/`** — Asosiy C&C Generals o'yinining C++ manba kodi.
+* **`GeneralsMD/`** — Generals Zero Hour kengaytmasining C++ manba kodi.
 
 ---
 
-## ⚙️ 4. Dasturchilar uchun: SAGE Dvigatelini Kompilyatsiya Qilish (.exe)
+## 🐛 5. Test Qilish va Xatoliklar (Bug Reporting)
 
-Agar siz o'yin dvigatelini o'zgartirmoqchi bo'lsangiz:
-1. Loyiha Microsoft Visual C++ 6.0 (SP6) yoki Visual Studio .NET 2003 uchun yozilgan (`Code/RTS.dsw`).
-2. Talab qilinadigan tashqi SDK'lar:
-   * DirectX 9.0 SDK
-   * STLport 4.5.3 (`stlport.diff` patchi bilan)
-   * RAD Miles Sound SDK
-   * RAD Bink SDK
-3. Barcha qaramliklar o'rnatilgach, `rts.dsw` loyihasini ochib **Rebuild All** orqali yangi `generals.exe` yig'ish mumkin.
+1. `Generals_Uzbek_Installer.exe` ni ishga tushiring va o'zbek tilini o'rnating.
+2. O'yinga kirib quyidagilarni tekshiring:
+   * Asosiy menyu, sozlamalar va tugmalar lotin yozuvida to'g'ri chiqayotgani;
+   * Birliklarning nomlari va buyruqlar paneli;
+   * Jang paytida diktor (EVA) xabarlari (masalan, baza hujum ostida qolganda yoki bo'linma chiqqanda);
+3. Agar biron bir so'z, harf yoki ovozda kamchilik sezilsa, [Issues](https://github.com/Tuxtamurod-Jurayev/generals_uzbek_tilida/issues) bo'limida xabar bering — tizim uni zudlik bilan tuzatadi!
 
 ---
 
-## 📜 5. Litsenziya
+## 📜 6. Litsenziya
 
 Ushbu manba kodi Electronic Arts Inc. tomonidan **GNU General Public License v3 (GPL v3)** litsenziyasi ostida taqdim etilgan.
-Batafsil ma'lumot uchun `LICENSE.md` fayliga qarang.
 "Command & Conquer" savdo belgisi Electronic Arts Inc.ga tegishli.

@@ -1,6 +1,7 @@
 // ============================================================================
-// Command & Conquer: Generals & Zero Hour - O'zbek Tili String Jadvali (Generals_UZ.str)
-// Loyiha: Generals Uzbek Tilida
+// Command & Conquer: Generals & Zero Hour - To'liq O'zbek Tili String Jadvali
+// Alifbo: O'zbek Lotin Alifbosi
+// Loyiha: https://github.com/Tuxtamurod-Jurayev/generals_uzbek_tilida
 // Muallif: Tuxtamurod-Jurayev
 // ============================================================================
 
@@ -12,7 +13,7 @@ GUI:Command&ConquerGeneralsZeroHour
 "Command & Conquer: Generallar - Hal qiluvchi Soat (Zero Hour)"
 End
 
-// --- ASOSIY MENYU (MAIN MENU) ---
+// --- ASOSIY MENYU VA NAVIGATSIYA ---
 GUI:SinglePlayer
 "Yakka O'yinchi"
 End
@@ -26,11 +27,11 @@ GUI:Options
 End
 
 GUI:Replays
-"Takroriy Tomosha (Replay)"
+"Takroriy Tomoshalar (Replay)"
 End
 
 GUI:Credits
-"Mualliflar va Ijodkorlar"
+"Ijodiy Guruh va Mualliflar"
 End
 
 GUI:Exit
@@ -42,19 +43,23 @@ GUI:PlayGame
 End
 
 GUI:Campaign
-"Kampaniya Missiyalari"
+"Kampaniya Boshlash"
 End
 
 GUI:Skirmish
 "Tezkor Jang (Skirmish)"
 End
 
+GUI:GeneralsChallenge
+"Generallar Bellashuvi (Challenge)"
+End
+
 GUI:CustomGame
-"Maxsus O'yin"
+"Maxsus Jang"
 End
 
 GUI:QuickMatch
-"Tezkor Raqib Topish"
+"Tezkor Raqib Qidirish"
 End
 
 GUI:Back
@@ -98,11 +103,11 @@ GUI:Delete
 End
 
 GUI:Restart
-"Qayta Boshlash"
+"Jangni Qayta Boshlash"
 End
 
 GUI:Resume
-"Davom Ettirish"
+"Jangni Davom Ettirish"
 End
 
 GUI:Surrender
@@ -113,7 +118,24 @@ GUI:Quit
 "Chiqish"
 End
 
-// --- SOZLAMALAR (OPTIONS) ---
+// --- QIYINLIK DARAJALARI ---
+GUI:Easy
+"Oson"
+End
+
+GUI:Medium
+"O'rtacha"
+End
+
+GUI:Hard
+"Qiyin"
+End
+
+GUI:Brutal
+"Shafqatsiz (Brutal)"
+End
+
+// --- SOZLAMALAR (AUDIO, VIDEO, BOSHQARUV) ---
 GUI:Audio
 "Ovoz Sozlamalari"
 End
@@ -123,7 +145,7 @@ GUI:Video
 End
 
 GUI:Keyboard
-"Boshqaruv Tugmalari"
+"Klaviatura va Boshqaruv"
 End
 
 GUI:Resolution
@@ -131,7 +153,7 @@ GUI:Resolution
 End
 
 GUI:Gamma
-"Yorug'lik (Gamma)"
+"Ekran Yorug'ligi (Gamma)"
 End
 
 GUI:MusicVolume
@@ -139,14 +161,34 @@ GUI:MusicVolume
 End
 
 GUI:VoiceVolume
-"Ovozlar Balandligi"
+"Ovozlar (Nutq) Balandligi"
 End
 
 GUI:FXVolume
-"Effektlar Balandligi"
+"Jangovar Effektlar Balandligi"
 End
 
-// --- FRAKSIYALAR (FACTIONS) ---
+GUI:AmbientVolume
+"Atrof-muhit Tovushlari"
+End
+
+GUI:ScrollSpeed
+"Kamera Harakatlanish Tezligi"
+End
+
+GUI:Shadows
+"3D Soyalar"
+End
+
+GUI:ParticleDetail
+"Zarrachalar Sifati"
+End
+
+GUI:TextureDetail
+"Tekstura Sifati"
+End
+
+// --- FRAKSIYALAR VA TOMONLAR ---
 SIDE:America
 "AQSH (Amerika Qo'shma Shtatlari)"
 End
@@ -160,10 +202,10 @@ SIDE:GLA
 End
 
 SIDE:Boss
-"Bosh General"
+"Bosh General (Leang)"
 End
 
-// --- GENERALLAR (ZERO HOUR GENERALS) ---
+// --- ZERO HOUR GENERALLARI ---
 GUI:GeneralAirForce
 "General Granger - Harbiy Havo Kuchlari Generali"
 End
@@ -200,7 +242,7 @@ GUI:GeneralDemolition
 "General Rodall Juhziz - Portlovchi Moddalar Generali"
 End
 
-// --- BOSHQARUV TUGMALARI VA HUD (CONTROL BAR) ---
+// --- BOSHQARUV PANELI VA BUYRUQLAR (CONTROL BAR) ---
 CONTROLBAR:Attack
 "Hujum Qilish"
 End
@@ -210,7 +252,7 @@ CONTROLBAR:Move
 End
 
 CONTROLBAR:Stop
-"To'xtash"
+"Harakatni To'xtatish"
 End
 
 CONTROLBAR:Guard
@@ -226,15 +268,15 @@ CONTROLBAR:ForceFire
 End
 
 CONTROLBAR:ForceMove
-"Majburiy Harakatlanish"
+"Majburiy Bosib O'tish"
 End
 
 CONTROLBAR:Sell
-"Bino/Obyektni Sotish"
+"Bino yoki Texnikani Sotish"
 End
 
 CONTROLBAR:Repair
-"Bino va Texnikani Ta'mirlash"
+"Bino va Obyektlarni Ta'mirlash"
 End
 
 CONTROLBAR:ConstructBuilding
@@ -245,13 +287,50 @@ CONTROLBAR:TrainUnit
 "Yangi Bo'linma Tayyorlash"
 End
 
-// --- XABARLAR VA OGOHLANTIRISHLAR (ALERTS & MESSAGES) ---
+CONTROLBAR:Evacuate
+"Ichidagilarni Chiqarish (Evakuatsiya)"
+End
+
+CONTROLBAR:Scatter
+"Tarqalish (Bombadan saqlanish)"
+End
+
+CONTROLBAR:Cheer
+"G'alabani Nishonlash"
+End
+
+// --- O'YIN HUD VA KO'RSATKICHLARI ---
+GUI:ControlBarMoneyDisplay
+"Mablag': $%d"
+End
+
+GUI:MaxSelectionSize
+"Ko'pi bilan %d ta bo'linma tanlanishi mumkin"
+End
+
+GUI:NothingSelected
+"Hech qanday bo'linma tanlanmagan"
+End
+
+GUI:SelectedAcrossScreen
+"Ekranda ko'ringan bo'linmalar tanlandi"
+End
+
+GUI:SelectedAcrossMap
+"Butun xaritadagi barcha bo'linmalar tanlandi"
+End
+
+TOOLTIP:SupplyWarehouse
+"Ta'minot Ombori: Qolgan resurs: %d"
+End
+
+// --- XABARLAR VA JANGOVAR OGOHLANTIRISHLAR (EVA ALERTS) ---
 GUI:InsufficientFunds
 "Mablag' yetarli emas!"
 End
 
 GUI:LowPower
-"Ogohlantirish: Elektr quvvati kam!"
+"Ogohlantirish: Elektr quvvati kam! Mudofaa tizimlari o'chdi."
 End
 
 GUI:BaseUnderAttack
@@ -270,45 +349,77 @@ GUI:BuildingConstructed
 "Bino qurib bitkazildi."
 End
 
+GUI:BuildingLost
+"Binomiz dushman tomonidan yo'q qilindi!"
+End
+
+GUI:UnitLost
+"Jangovar bo'linma halok bo'ldi!"
+End
+
 GUI:UnitPromoted
-"Bo'linma yangi jangovar darajaga ko'tarildi!"
+"Bo'linma yangi jangovar darajaga erishdi!"
+End
+
+GUI:GeneralPromoted
+"Siz yangi general unvoniga ko'tarildingiz! General ballarini sarflang."
 End
 
 GUI:Victory
-"G'alaba! Dushman batamom tor-mor etildi!"
+"G'alaba! Barcha dushman kuchlari tor-mor etildi!"
 End
 
 GUI:Defeat
-"Mag'lubiyat! Kuchlarimiz yo'q qilindi..."
+"Mag'lubiyat! Barcha harbiy kuchlarimiz yo'q qilindi..."
 End
 
 GUI:SuperweaponReady
-"O'ta Qurol foydalanishga tayyor!"
+"O'ta Qurol foydalanishga to'liq tayyor!"
 End
 
 GUI:ParticleCannonActivated
-"Zarrachalar To'pi ishga tushirildi!"
+"Zarrachalar To'pi (Particle Cannon) nuri nishonga yo'naltirildi!"
 End
 
 GUI:NuclearMissileLaunched
-"Yadroviy Raketa uchirildi!"
+"Ogohlantirish: Yadroviy Raketa uchirildi!"
 End
 
 GUI:SCUDStormLaunched
-"SKAD Bo'roni hujumi boshlandi!"
+"Diqqat: SKAD Bo'roni o't ochdi!"
 End
 
-// --- OBYEKTLAR VA TEXNIKALAR (UNITS & STRUCTURES) ---
+GUI:A10StrikeInbound
+"A-10 Havo Hujumi samolyotlari yetib kelmoqda!"
+End
+
+GUI:CarpetBombInbound
+"Gilamdek Yoppasiga Bombardimon harakati boshlandi!"
+End
+
+GUI:FuelAirBombDropped
+"Vakuumli Aviabomba tashlandi!"
+End
+
+GUI:MOABDropped
+"MOAB (Barcha Bombalar Onasi) tashlandi!"
+End
+
+// --- AQSH TEXNIKALARI VA BINOLARI ---
 OBJECT:AmericaVehicleDozer
-"AQSH Muhandislik Dozeri"
+"AQSH Qurilish Dozeri"
 End
 
 OBJECT:AmericaInfantryRanger
-"Reyndjer (AQSH Piyodasi)"
+"Reyndjer (AQSH Maxsus Piyodasi)"
 End
 
 OBJECT:AmericaInfantryMissileDefender
-"Raketa Otuvchi Askar"
+"Raketa Otuvchi Piyoda"
+End
+
+OBJECT:AmericaInfantryColonelBurton
+"Polkovnik Byorton (AQSH Qahramoni)"
 End
 
 OBJECT:AmericaVehicleHumvee
@@ -316,31 +427,43 @@ OBJECT:AmericaVehicleHumvee
 End
 
 OBJECT:AmericaVehicleCrusader
-"Krusader Jangovar Tanki"
+"Krusader Asosiy Jangovar Tanki"
 End
 
 OBJECT:AmericaVehiclePaladin
-"Paladin Lazerli Tanki"
+"Paladin Lazerli Mudofaa Tanki"
 End
 
 OBJECT:AmericaVehicleAmbulance
-"Tibbiy Qutqaruv Mashinasi"
+"Tibbiy Evakuatsiya Mashinasi"
 End
 
 OBJECT:AmericaVehicleTomahawk
-"Tomagavk Raketa Otish Qurilmasi"
+"Tomagavk Qanotli Raketa Tizimi"
+End
+
+OBJECT:AmericaVehicleAvenger
+"Avendjer Lazerli Havo Mudofaa Mashinasi"
+End
+
+OBJECT:AmericaVehicleMicrowave
+"Mikroto'lqinli Lazer Mashinasi"
 End
 
 OBJECT:AmericaVehicleComanche
-"Komanchi Jangovar Vertolyoti"
+"Komanchi Hujum Vertolyoti"
 End
 
 OBJECT:AmericaJetRaptor
-"Raptor Tovushdan Tez Qiruvchisi"
+"Raptor Tovushdan Tez Qiruvchi Samolyoti"
 End
 
 OBJECT:AmericaJetAurora
 "Avrora Tovushdan Tez Bombardimonchisi"
+End
+
+OBJECT:AmericaJetStealthFighter
+"Yashirin Qiruvchi (Stealth Fighter)"
 End
 
 OBJECT:AmericaStructureCommandCenter
@@ -348,23 +471,27 @@ OBJECT:AmericaStructureCommandCenter
 End
 
 OBJECT:AmericaStructurePowerPlant
-"Elektr Stansiyasi"
+"Atom Elektr Stansiyasi"
 End
 
 OBJECT:AmericaStructureBarracks
-"AQSH Kazarmasi (Piyodalar bazasi)"
+"AQSH Piyodalar Kazarmasi"
 End
 
 OBJECT:AmericaStructureSupplyCenter
-"Ta'minot va Resurs Markazi"
+"AQSH Ta'minot va Resurs Markazi"
 End
 
 OBJECT:AmericaStructureWarFactory
-"Harbiy Texnika Zavodi"
+"AQSH Harbiy Texnika Zavodi"
 End
 
 OBJECT:AmericaStructureAirfield
-"Harbiy Havo Bazasi (Aerodrom)"
+"AQSH Harbiy Aerodromi"
+End
+
+OBJECT:AmericaStructureStrategyCenter
+"Harbiy Strategiya Markazi"
 End
 
 OBJECT:AmericaStructurePatriot
@@ -375,13 +502,13 @@ OBJECT:AmericaStructureParticleCannon
 "Zarrachalar To'pi (Particle Cannon)"
 End
 
-// --- XITOY (CHINA) ---
+// --- XITOY TEXNIKALARI VA BINOLARI ---
 OBJECT:ChinaVehicleDozer
 "Xitoy Qurilish Dozeri"
 End
 
 OBJECT:ChinaInfantryRedGuard
-"Qizil Gvardiyachi (Piyoda)"
+"Qizil Gvardiyachi (Piyoda Askar)"
 End
 
 OBJECT:ChinaInfantryTankHunter
@@ -392,31 +519,79 @@ OBJECT:ChinaInfantryHacker
 "Harbiy Xaker"
 End
 
+OBJECT:ChinaInfantryBlackLotus
+"Qora Lotus (Xitoy Afsonaviy Qahramoni)"
+End
+
 OBJECT:ChinaVehicleBattleMaster
 "Battlemaster Asosiy Jangovar Tanki"
 End
 
 OBJECT:ChinaVehicleOverlord
-"Overlord O'ta Og'ir Tanki"
+"Overlord O'ta Og'ir Qo'mondonlik Tanki"
 End
 
 OBJECT:ChinaVehicleGattlingTank
 "Gatling Pulemyotli Tank"
 End
 
+OBJECT:ChinaVehicleDragon
+"Ajdaho (Dragon) O't Purkovchi Tanki"
+End
+
+OBJECT:ChinaVehicleTroopCrawler
+"Askarlar Tashuvchi Og'ir Mashina"
+End
+
+OBJECT:ChinaVehicleECM
+"ECM Radioelektron Kurash Tanki"
+End
+
 OBJECT:ChinaJetMIG
-"MiG Qiruvchi Samolyoti"
+"MiG Qiruvchi Reaktiv Samolyoti"
+End
+
+OBJECT:ChinaJetHelix
+"Xeliks (Helix) Og'ir Transport Vertolyoti"
 End
 
 OBJECT:ChinaStructureCommandCenter
 "Xitoy Bosh Qo'mondonlik Markazi"
 End
 
+OBJECT:ChinaStructureNuclearPowerPlant
+"Yadroviy Elektr Stansiyasi"
+End
+
+OBJECT:ChinaStructureBarracks
+"Xitoy Askarlar Kazarmasi"
+End
+
+OBJECT:ChinaStructureSupplyCenter
+"Xitoy Resurs va Ta'minot Markazi"
+End
+
+OBJECT:ChinaStructureWarFactory
+"Xitoy Og'ir Texnika Zavodi"
+End
+
+OBJECT:ChinaStructureAirfield
+"Xitoy Harbiy Aerodromi"
+End
+
+OBJECT:ChinaStructurePropagandaTower
+"Tashviqot Minora (Propaganda Tower)"
+End
+
+OBJECT:ChinaStructureGattlingCannon
+"Gatling Pulemyotli Mudofaa Minorasi"
+End
+
 OBJECT:ChinaStructureNuclearMissile
 "Yadroviy Raketa Silosi"
 End
 
-// --- GLA ---
+// --- GLA TEXNIKALARI VA BINOLARI ---
 OBJECT:GLAWorker
 "GLA Quruvchi Ishchisi"
 End
@@ -426,15 +601,27 @@ OBJECT:GLAInfantryRebel
 End
 
 OBJECT:GLAInfantryTunnelDefender
-"RPG Otuvchi Himoyachi"
+"RPG Otuvchi Himoyachi Askar"
+End
+
+OBJECT:GLAInfantryTerrorist
+"Xudkush Portlovchi (Kamikadze)"
+End
+
+OBJECT:GLAInfantryAngryMob
+"G'azablangan Xalq To'dasi (Angry Mob)"
+End
+
+OBJECT:GLAInfantryJarmenKell
+"Jarmen Kell (Snayper Mergan Qahramon)"
 End
 
 OBJECT:GLAVehicleTechnical
-"Pikap (Texnik O'q Otish Mashinasi)"
+"Pikap (Texnik Tezkor O't Otish Mashinasi)"
 End
 
 OBJECT:GLAVehicleScorpion
-"Skorpion Yengil Tanki"
+"Skorpion Yengil Jangovar Tanki"
 End
 
 OBJECT:GLAVehicleMarauder
@@ -445,10 +632,71 @@ OBJECT:GLAVehicleBombTruck
 "Portlovchi Moddalar Yuklangan Mashina"
 End
 
+OBJECT:GLAVehicleRocketBuggy
+"Raketali Baggi (Rocket Buggy)"
+End
+
+OBJECT:GLAVehicleToxinTruck
+"Toksin Purkovchi Mashina"
+End
+
+OBJECT:GLAVehicleBattleBus
+"Jangovar Bronelangan Avtobus"
+End
+
 OBJECT:GLAStructureCommandCenter
-"GLA Bosh Boshqaruv Markazi"
+"GLA Bosh Maxfiy Markazi"
+End
+
+OBJECT:GLAStructureBarracks
+"GLA Isyonchilar Lageri"
+End
+
+OBJECT:GLAStructureSupplyStash
+"GLA Resurs va Qurol Ombori"
+End
+
+OBJECT:GLAStructureArmsDealer
+"GLA Qurol-Yaroq Sotuvchisi (Texnika Bazasi)"
+End
+
+OBJECT:GLAStructureTunnelNetwork
+"Yashirin Yerosti Tunnellar Tizimi"
+End
+
+OBJECT:GLAStructureStingerSite
+"Stinger Zenit-Raketa Uyasi"
+End
+
+OBJECT:GLAStructurePalace
+"GLA Rahbariyati Qasri (Palace)"
+End
+
+OBJECT:GLAStructureBlackMarket
+"Maxfiy Qora Bozor (Black Market)"
 End
 
 OBJECT:GLAStructureSCUDStorm
 "SKAD Bo'roni Raketa Majmuasi"
+End
+
+// --- TIZIM XATOLIKLARI VA SAQLASH ---
+GUI:ErrorSavingGame
+"O'yinni saqlashda xatolik yuz berdi!"
+End
+
+GUI:GameSaveComplete
+"O'yin muvaffaqiyatli saqlandi."
+End
+
+GUI:ErrorLoadingGame
+"Saqlangan o'yinni yuklashda xatolik yuz berdi!"
+End
+
+GUI:NewSaveGame
+"Yangi Saqlangan O'yin"
+End
+
+GUI:LastReplay
+"So'nggi Jang Takrori"
 End
